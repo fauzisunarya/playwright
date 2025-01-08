@@ -29,10 +29,10 @@ test('case dua', async ({ page }) => {
     const buttonLogin = page.locator('#login-button');
     await buttonLogin.click();
 
-    const pilihItem1 = page.locator('#add-to-cart-sauce-labs-backpack');
-    await pilihItem1.click();
-    const pilihItem2 = page.locator('#add-to-cart-sauce-labs-bike-light');
-    await pilihItem2.click();
+    const pilihItemTas = page.locator('#add-to-cart-sauce-labs-backpack');
+    await pilihItemTas.click();
+    const pilihItemSepeda = page.locator('#add-to-cart-sauce-labs-bike-light');
+    await pilihItemSepeda.click();
 
     const btnCart = page.locator('.shopping_cart_link');
     await btnCart.click();
