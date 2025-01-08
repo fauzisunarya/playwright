@@ -1,4 +1,5 @@
 const {test, expect } = require("@playwright/test");
+const { default: newLoginActions } = require("./spec/actions/newLoginActions");
 
 test('case satu', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/');
@@ -62,4 +63,14 @@ test('case dua', async ({ page }) => {
     await expect(headerSukses).toHaveText('Thank you for your order!');
 
 
+})
+
+test('cara pmo', async ({ page }) => {
+    const objTest = new newLoginActions(page);
+    await objTest.Goto();
+    await objTest.inputLogin();
+    await objTest.addItem();
+    await objTest.cart();
+    await objTest.inputDataPelanggan();
+    await objTest.checkout();
 })
